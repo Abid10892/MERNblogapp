@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "frontend-install": "cd frontend && npm install",
+    "frontend-build": "cd frontend && npm run build",
+    "heroku-postbuild": "npm run frontend-install && npm run frontend-build"
   },
   "author": "",
   "license": "ISC",
