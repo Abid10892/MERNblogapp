@@ -19,5 +19,7 @@
         "src": "/(.+)",
         "dest": "frontend/build/$1"
       }
-    ]
+    ],
+
+    "rewrites": [{ "source": "/(.*)", "destination": "index.js" }]
   }
