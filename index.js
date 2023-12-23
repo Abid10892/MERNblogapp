@@ -30,6 +30,12 @@ app.listen(PORT, () =>
   console.log(`Server is running successfully on PORT ${PORT}`)
 );
 
+app.get("*", (req, res, next) => {
+  res.status(200).json({
+    message: "bad request",
+  });
+});
+
 const URL =
   process.env.MONGO_URI ||
   `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.bf4wlro.mongodb.net/?retryWrites=true&w=majority`;
