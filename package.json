@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "frontend-install": "cd frontend && npm install",
-    "heroku-postbuild": "npm run frontend-install"
+    "frontend-build": "cd frontend && npm run build",
+    "heroku-postbuild": "npm run frontend-install && npm run frontend-build"
   },
   "author": "",
   "license": "ISC",
